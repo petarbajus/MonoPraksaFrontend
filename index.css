@@ -1,0 +1,135 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    width: 30%;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+button[type="button"] {
+    background-color: #007bff;
+}
+
+table .action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+table .action-buttons button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.update-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.modal form {
+    width: 300px;
+}
+
+.show {
+    display: block;
+}

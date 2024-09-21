@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club CRUD</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Club CRUD</h1>
+
+    <div class="container">
+        <!-- Form to add new clubs -->
+        <div class="form-container">
+            <form id="club-form">
+                <div>
+                    <label for="club-name">Club Name:</label>
+                    <input type="text" id="club-name" placeholder="Enter Club Name" required>
+                </div>
+
+                <div>
+                    <label for="club-color">Club Color:</label>
+                    <input type="text" id="club-color" placeholder="Enter Club Color" required>
+                </div>
+
+                <div>
+                    <label for="club-foundation">Club Foundation Date:</label>
+                    <input type="date" id="club-foundation" required>
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+
+        <!-- Table to display club data -->
+        <table id="club-table">
+            <thead>
+                <tr>
+                    <th>Club Id</th>
+                    <th>Club Name</th>
+                    <th>Characteristic Color</th>
+                    <th>Foundation Date</th>
+                    <th>Actions</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Will contain club information, added dynamically in the displayClubs() method-->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal shows up when clicked on UPDATE button in the table-->
+    <div class="modal" id="update-modal">
+        <form id="update-club-form">
+            <input type="hidden" id="update-club-id">
+
+            <label for="update-club-name">New Club Name (optional):</label>
+            <input type="text" id="update-club-name">
+
+            <label for="new-club-color">New Club Color (optional):</label>
+            <input type="text" id="new-club-color">
+
+            <label for="new-club-foundation">New Foundation Date (optional):</label>
+            <input type="date" id="new-club-foundation">
+
+            <button type="submit">Update Club</button>
+            <button type="button" id="cancel-update">Cancel</button>
+        </form>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
